@@ -14,8 +14,8 @@ app.all("/*", function(req, res, next){
     next();
 });
 
-
 let allFriends = [{fName: 'Coach', lName: 'Tim', email: 'tim.broos@becode.org', phone: '0469420666', signatureMove: 'Yeet', language: 'Javascript'}];
+let allPosts =  [ { author:'Jimmy', title:"First post", content:"content of the post , could be longer but thats it for now"}]
 
 // Below you can define how your API handles a get or a post request.
 // Try sending a get request to the root, you should get a "Hello from server" back.
@@ -27,6 +27,8 @@ app.get('/', function (request, response) {
 app.post('/', function (request, response) {
     response.status(200).send({"message": "Data received"});
 });
-
+app.get('/allPosts',function (request, response){
+    response.send(allPosts);
+});
 
 app.listen(PORT, function () {});
