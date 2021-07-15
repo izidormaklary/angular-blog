@@ -21,7 +21,7 @@ let allPosts =  [ {
     title:"First post", 
     content:"content of the post , could be longer but thats it for now",
     comments: [
-        { id=1, user : "first commenter", text:"very good post. Thanks for sharing!!"}
+        { id: 1, user : "first commenter", text:"very good post. Thanks for sharing!!"}
     ]
 }]
 
