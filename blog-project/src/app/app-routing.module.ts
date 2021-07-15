@@ -6,9 +6,10 @@ import { PostComponent } from './post/post.component';
 
 const routes: Routes = [
   { path: '', component: PostComponent },
+
   
 ];
-//  http://localhost:4200/1
+
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

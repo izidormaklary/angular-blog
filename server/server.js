@@ -21,7 +21,7 @@ let allPosts =  [ {
     title:"First post", 
     content:"content of the post , could be longer but thats it for now",
     comments: [
-        { id=1, user : "first commenter", text:"very good post. Thanks for sharing!!"}
+        { id: 1, user : "first commenter", text:"very good post. Thanks for sharing!!"}
     ]
 }]
 
@@ -32,8 +32,8 @@ app.get('/', function (request, response) {
     response.send('Hello from server');
 });
 
-app.post('/', function (request, response) {
-    response.status(200).send({"message": "Data received"});
+app.post('/allPosts', function (request, response) {
+    allPosts.push(request.body)
 });
 app.get('/allPosts',function (request, response){
     response.send(allPosts);

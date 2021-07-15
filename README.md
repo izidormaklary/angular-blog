@@ -19,7 +19,7 @@ To have a node server based simple blog, with posting, liking, and commenting fe
 ## Planned extras:
 
 - Pictures in posts
-![Pictures in posts](./blog-project/Screenshot.png)
+![Pictures in posts](./Screenshot.png)
 
 
 
