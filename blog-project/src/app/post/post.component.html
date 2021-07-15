@@ -1,4 +1,13 @@
-<div *ngFor="let post of allPosts" >
-    <p>{{post.author}}</p>
+<h1 class="text-center mt-5 mb-3">Posts</h1>
+<div *ngFor="let post of allPosts">
+    <div class="card col-lg-5 col-sm-11 d-block justify-content-center mx-auto my-3" >
+        <!-- <img src="..." class="card-img-top" alt="..."> -->
+        <div class="card-body">
+          <h5 class="card-title">{{post.title}}</h5>
+          <p>{{post.author}}</p>
+          <p class="card-text">{{post.content}}</p>
+            <a href="#" class="stretched-link"></a> 
+        </div>
+    </div>
 
 </div>
