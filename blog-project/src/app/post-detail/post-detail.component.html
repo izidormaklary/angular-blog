@@ -1,0 +1,12 @@
+<div class="card col-lg-5 col-sm-11 d-block justify-content-center mx-auto mt-5" >
+    <img *ngIf="selectedPost.imgSrc !== ''" src="{{selectedPost.imgSrc}}" class="card-img-top" alt="...">
+    <div class="card-body">
+       
+<h5 class="card-title"> {{selectedPost.title}} </h5>
+      <p> {{selectedPost.author}}  </p>
+      
+      <p class="card-text">{{selectedPost.content}}</p>
+        <a routerLink="post/{{selectedPost.id}}" class="stretched-link"></a>
+    </div>
+</div>
+<app-comments *ngIf="selectedPost.id !== '' " [post]=" selectedPost "></app-comments> 

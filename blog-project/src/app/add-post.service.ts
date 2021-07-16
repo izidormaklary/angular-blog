@@ -16,4 +16,7 @@ export class AddPostService {
   addPost(post:Post){
    return this.http.post<any>( this.url, post)
   }
+  getPostById(id:string){
+
+  }
 }
