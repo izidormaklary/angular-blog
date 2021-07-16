@@ -21,6 +21,7 @@ export class PostFormComponent implements OnInit {
 
   }
   addPost(){
+    this.postModel.imgSrc="https://www.imgacademy.com/themes/custom/imgacademy/images/helpbox-contact.jpg"
     this.postModel.id = uuid();
     this.postService.addPost(this.postModel).subscribe(data=> alert("Successfully posted!"), error=>alert(error))
     this.router.navigate(['']);

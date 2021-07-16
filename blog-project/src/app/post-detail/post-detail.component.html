@@ -1,12 +1,14 @@
-<div class="card col-lg-5 col-sm-11 d-block justify-content-center mx-auto mt-5" >
-    <img *ngIf="selectedPost.imgSrc !== ''" src="{{selectedPost.imgSrc}}" class="card-img-top" alt="...">
-    <div class="card-body">
-       
-<h5 class="card-title"> {{selectedPost.title}} </h5>
-      <p> {{selectedPost.author}}  </p>
-      
-      <p class="card-text">{{selectedPost.content}}</p>
-        <a routerLink="post/{{selectedPost.id}}" class="stretched-link"></a>
+<div class="row justify-content-center">
+ <div class="col-lg-8  col-md-10 col-sm-11">
+    <div class="card  mt-5 shadow " >
+        <img *ngIf="selectedPost.imgSrc" [src]="selectedPost.imgSrc" class="card-img-top w-100" alt="...">
+        <div class="card-body">
+            <h5 class="card-title"> {{selectedPost.title}} </h5>
+            <p> {{selectedPost.author}}  </p>
+            
+            <p class="card-text">{{selectedPost.content}}</p>
+        </div>
     </div>
 </div>
-<app-comments *ngIf="selectedPost.id !== '' " [post]=" selectedPost "></app-comments> 
+</div>
+<app-comments *ngIf="selectedPost.id" [post]=" selectedPost "></app-comments> 

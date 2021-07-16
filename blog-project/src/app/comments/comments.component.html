@@ -1,6 +1,18 @@
-
-
-<div  *ngFor="let comment of post.comments" >
-    <h1>{{comment.user}}</h1>
-    <p>{{comment.text}}</p>
-</div> 
+<div class="row justify-content-center">
+    <div class="col-lg-6 col-md-8" >
+        <app-comment-form [post]="post" ></app-comment-form>
+    </div>
+</div>
+<div *ngIf="post.comments.length>0" class="row justify-content-center mt-5">
+    <div class="col-lg-6 col-md-8" >
+        <div class="card" >
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item" *ngFor="let comment of post.comments;">
+                    <h1>{{comment.user}}</h1>
+                    <p>{{comment.text}}</p>
+                </li>
+       
+            </ul>
+        </div>
+    </div>
+</div>

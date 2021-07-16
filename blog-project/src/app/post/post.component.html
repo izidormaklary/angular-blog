@@ -1,16 +1,28 @@
 <app-post-form></app-post-form>
+<div class="row" >
 <h1 class="text-center mt-5 mb-3">Posts</h1>
+
 <div *ngFor="let post of allPosts">
-  
-    <div class="card col-lg-5 col-sm-11 d-block justify-content-center mx-auto my-3" >
-        <img *ngIf="post.imgSrc !== ''" src="{{post.imgSrc}}" class="card-img-top" alt="...">
+
+    <div class="card col-lg-6 col-md-8 col-sm-11 d-block justify-content-center mx-auto my-3">
+          <img *ngIf="post.imgSrc" [src]="post.imgSrc"  class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">{{post.title}}</h5>
-          <p>{{post.author}}  </p>         
-          <p class="card-text">{{post.content}}</p>
-          <!-- <p class="card-text">{{post.comment}}</p> -->
-            <a routerLink="post/{{post.id}}" class="stretched-link"></a> 
+            <h5 class="card-title">{{post.title}}</h5>
+            <p>{{post.author}} </p>
+            <p class="card-text">{{post.content}}</p>
+            <!--<p class="card-text">{{post.comment}}</p> -->
+            <a routerLink="post/{{post.id}}" class="stretched-link"></a>
+           
         </div>
+       <div class="card-footer bg-white">
+          <small class="text-muted">{{post.comments.length}} comments</small>
+          <label>
+            <input type="radio" name="test" value="small" checked>
+            <img src="https://iconarchive.com/download/i108488/google/noto-emoji-people-bodyparts/12008-thumbs-up.ico">
+          </label>
+          
+        </div> 
     </div>
 
+</div>
 </div>

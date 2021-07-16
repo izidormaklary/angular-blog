@@ -8,6 +8,7 @@ import { PostFormComponent } from './post-form/post-form.component';
 import {HttpClientModule} from "@angular/common/http";
 import { CommentsComponent } from './comments/comments.component';
 import { PostDetailComponent } from './post-detail/post-detail.component';
+import { CommentFormComponent } from './comment-form/comment-form.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { PostDetailComponent } from './post-detail/post-detail.component';
     PostComponent,
     PostFormComponent,
     CommentsComponent,
-    PostDetailComponent
+    PostDetailComponent,
+    CommentFormComponent
   ],
   imports: [
     BrowserModule,

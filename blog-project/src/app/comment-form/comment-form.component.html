@@ -1,0 +1,26 @@
+<form name="postForm" class="" ngForm #commentForm="ngForm"
+(ngSubmit)="addComment()" novalidate>
+
+
+
+  <div class="form-group">
+      <label for="user">user</label>
+      <input type="text" id="user" name="user" class="form-control"
+          required
+          [(ngModel)]="commentModel.user" #user="ngModel"
+          >
+  </div>
+  <div class="form-group">
+      <label for="text">text</label>                     
+        
+         <textarea id="text" name="text" class="form-control" rows="3"
+         required
+         [(ngModel)]="commentModel.text" #text="ngModel"
+         ></textarea>
+  </div>
+  <button class="btn d-block mx-auto text-center w-25 btn-primary form-control mt-3" id="submit" type="submit"
+          [disabled]="commentForm.invalid"
+
+  > Submit
+  </button>
+</form>

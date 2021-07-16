@@ -5,6 +5,6 @@ export class Post {
         public author: string="",
         public imgSrc:string = "",
         public content: string="",
-        public comment: any=[]      
+        public comments: any=[]      
     ){}
     }
